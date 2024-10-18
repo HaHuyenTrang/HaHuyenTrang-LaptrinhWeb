@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casio Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-frame">
+        <div class="calculator">
+            <div class="calculator-header">
+                <span class="brand">CASIO</span>
+                <span class="model">CLASSWIZ</span>
+            </div>
+            <div class="calculator-screen">
+                <input type="text" class="display" id="display" disabled>
+            </div>
+            <div class=>
+                <div class="row">
+                    <button class="btn function" onclick="setFunction('SHIFT')">SHIFT</button>
+                    <button class="btn function" onclick="setFunction('ALPHA')">ALPHA</button>
+                    <button class="btn operation" onclick="clearDisplay()">AC</button>
+
+                </div>
+                <div class="">
+                    <button class="btn" onclick="appendCharacter('7')">7</button>
+                    <button class="btn" onclick="appendCharacter('8')">8</button>
+                    <button class="btn" onclick="appendCharacter('9')">9</button>
+                    <button class="btn function" onclick="appendCharacter('*')">x</button> 
+
+                </div>
+                <div class="">
+                    <button class="btn" onclick="appendCharacter('4')">4</button>
+                    <button class="btn" onclick="appendCharacter('5')">5</button>
+                    <button class="btn" onclick="appendCharacter('6')">6</button>
+                    <button class="btn function"  onclick="appendCharacter('/')">/</button> 
+
+                </div>
+                <div class="">
+                    <button class="btn" onclick="appendCharacter('1')">1</button>
+                    <button class="btn" onclick="appendCharacter('2')">2</button>
+                    <button class="btn" onclick="appendCharacter('3')">3</button>
+                    <button class="btn operation" onclick="appendCharacter('+')">+</button>
+                </div>
+                <div class="">
+                    <button class="btn number zero" colspan="2" onclick="appendCharacter('0')">0</button>
+                    <button class="btn operation" onclick="appendCharacter('.')">.</button>
+                    <button class="btn operation" onclick="calculateResult()">=</button>
+                    <button class="btn operation" onclick="deleteDigit()">DEL</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
